@@ -1,6 +1,6 @@
 public class HogwartsStudent 
 {
-    // TODO 1: Implement instance variables, a constructor, getters, and setters
+    // Implement instance variables, a constructor, getters, and setters
     private String name;
     private String gender;
     private int year;
@@ -61,13 +61,8 @@ public class HogwartsStudent
         this.favoriteSpell = newfavoirteSpell;
     }
 
-    // TODO 2: Implement a toString method:
-    /* 
-     * If the HogwartsStudent is female, return a String that starts with "Witch name: " ...
-     * If the HogwartsStudent is male, return a String that starts with "Wizard name: " ...
-     * If the HogwartsStudent is nb / no gender stated, return a String that starts with "Magical Being name: " ...
-     */
-
+    // Implement a toString method:
+  
     public String toString(String name, String gender)
     {
         if(this.gender.equalsIgnoreCase("female"))
