@@ -4,14 +4,13 @@ import java.util.Random;
 public class Duel {
     public static void main(String[] args) {
 
-        // TODO 4: Create HogwartsStudent objects for Harry and Hermione
+        // Create HogwartsStudent objects for Harry and Hermione
         int studentCount = 0;
         HogwartsStudent harry = new HogwartsStudent("Harry", "male", 1, "Gryffindor", " ");
         studentCount ++;
         HogwartsStudent hermione = new HogwartsStudent("Hermione", "female", 1, "Gryffindor", "stupefy");
         studentCount ++;
-        // TODO 5: Prompt the user to choose a spell for Harry
-        // Choose your spell to practice, either Expelliarmus, Stupefy, or Levicorpus: 
+        //  Prompt the user to choose a spell for Harry
         Scanner scanner = new Scanner(System.in);
         // using a do while loop to give the user infinite attempts to input data correctly
         do
@@ -39,29 +38,27 @@ public class Duel {
         while (true);
         scanner.close();
         
-        // TODO 6: Set Hermione's favorite spell to "Stupefy"
+        // Set Hermione's favorite spell to "Stupefy"
 
         hermione.setFavoriteSpell("stupefy");
 
-        // TODO 7: Create a spell object for each of Harry's and Hermione's favorite spells
+        // Create a spell object for each of Harry's and Hermione's favorite spells
 
         Spell harryFavoriteSpell = new Spell(harry.getFavoriteSpell());
         Spell hermioneFavoriteSpell = new Spell(hermione.getFavoriteSpell());
         
-        // TODO 8: Check if Harry's favorite spell is "Expelliarmus" and print the spell's description if it is
+        // Check if Harry's favorite spell is "Expelliarmus" and print the spell's description if it is
 
         if (harryFavoriteSpell.toString("expelliarmus").equalsIgnoreCase("expelliarmus"))
         {
             System.out.println(harryFavoriteSpell.getDescription() + '\n');
         }
 
-        // TODO 9: Print Hermione's favorite spell
+        // Print Hermione's favorite spell
 
         System.out.println('\n' + "Hermiones favorite spell is " + hermioneFavoriteSpell.getSpell() + "\n");
 
-        // TODO 10: Print information about the duelers (Harry and Hermione)
-        // Use the toString method
-
+        // Print information about the duelers (Harry and Hermione)
         System.out.println(harry.toString(harry.getName(), harry.getGender()) + '\n' +
                            "Gender: " + harry.getGender() + '\n' +
                            "Year: " + harry.getYear() + '\n' + 
@@ -74,8 +71,7 @@ public class Duel {
                            "House: " + hermione.getHouse() + '\n' +
                            "Favorite Spell: " + hermione.getFavoriteSpell() + ": " + hermioneFavoriteSpell.getDescription() + '\n' +
                            "--------------------------------" + '\n');
-        // TODO 11: Check the number of HogwartsStudents in the duel for fairness 
-        // Hint: this number should increase every time a new HogwartsStudent object is created
+        //  Check the number of HogwartsStudents in the duel for fairness 
         if(studentCount == 2)
         {
             System.out.println("Fair Duel!" + '\n' +
@@ -88,14 +84,14 @@ public class Duel {
             System.out.println("Unfair Duel" + '\n' +
                                 "Amount of students: " + studentCount);
         }
-        // TODO 13: Determine the winner of the duel based on the effectiveness of their favorite spells 
+        // Determine the winner of the duel based on the effectiveness of their favorite spells 
         System.out.println("The winner is " + Duel.determineWinner(harry, hermione) + '!');
     }
 
     // Method to determine the winner based on the effectiveness of their favorite spells
     public static String determineWinner(HogwartsStudent student1, HogwartsStudent student2) 
     {
-        // TODO 11: Implement the logic to determine the winner
+        // Implement the logic to determine the winner
         
         HogwartsStudent harry = student1;
         HogwartsStudent hermione = student2;
