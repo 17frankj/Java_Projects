@@ -1,9 +1,5 @@
 class Spell 
 {
-
-    // TODO 3: Implement useful instance variables, a constructor, getters & setters, and a toString method
-    // Hint: A spell has a name and a description
-
     //instance variables
     private String spell;
     private String description;
