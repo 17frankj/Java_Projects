@@ -1,4 +1,4 @@
 # Java_Projects
-Various projects in java 
-
+One of my first assigments ever in Java. 
+Its amazing to see how far i've come!
 -A simple harry potter duel
